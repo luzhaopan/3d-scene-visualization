@@ -4,8 +4,9 @@
 
 ## 主要项目技术栈
 
-- three.js：一个用于创建和渲染3D场景的JavaScript库。
 - Vite：使用Vite作为项目开发工具。
+- three.js：一个用于创建和渲染3D场景的JavaScript库。
+- gsap: 可以对JavaScript可以操作的所有内容进行动画处理（CSS属性，SVG，React，画布，通用对象等）。
 
 ## Project Setup
 
