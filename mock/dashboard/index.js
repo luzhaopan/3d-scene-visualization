@@ -15,7 +15,7 @@ const info1 =  Mock.mock({
   },
   "power": {
       "name": "城市电力能耗",
-      "number|1-100.1-4": 0,
+      "number|1-50": 0,
       "unit": "兆瓦时"
   },
   "event": {
@@ -38,7 +38,7 @@ const info2 =  Mock.mock({
   },
   "power": {
       "name": "城市电力能耗",
-      "number|1-600.1-4": 0,
+      "number|1-60": 0,
       "unit": "兆瓦时"
   },
   "event": {

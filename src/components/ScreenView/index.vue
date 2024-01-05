@@ -9,7 +9,7 @@
           </h3>
           <h1>
             <img src="@/assets/bg/bar.svg" class="icon" />
-            <span>{{ item.number }}（{{ item.unit }}）</span>
+            <span>{{ toFixInt(item.number) }}（{{ item.unit }}）</span>
           </h1>
           <div class="footerBoder"></div>
         </div>
@@ -47,6 +47,10 @@
 import { ref } from 'vue'
 
 const props = defineProps(['dataInfo', 'eventList'])
+
+const toFixInt = (num) => {
+  return num.toFixed(0)
+}
 
 const getImage = (url) => {
   return new URL(`../../assets/bg/${url}`, import.meta.url).href
