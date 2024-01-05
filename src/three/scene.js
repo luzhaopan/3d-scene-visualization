@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-// 初始化场景
+// 创建3D场景对象Scene
 const scene = new THREE.Scene();
 
 // 场景天空盒

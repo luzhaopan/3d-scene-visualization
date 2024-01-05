@@ -9,10 +9,8 @@ import { onMounted, ref } from 'vue'
 
 // 导入场景
 import scene from '@/three/scene'
-
 // 导入相机
 import camera from '@/three/camera'
-
 // 导入辅助坐标轴
 import axesHelper from '@/three/axesHelper'
 // 导入渲染器
@@ -32,7 +30,13 @@ scene.add(camera)
 scene.add(axesHelper)
 
 onMounted(() => {
+  // 渲染器Canvas画布属性.domElement
+  // 渲染器WebGLRenderer通过属性.domElement可以获得渲染方法.render()生成的Canvas画布，.domElement本质上就是一个HTML元素：Canvas画布。
+  //Canvas画布插入到任意HTML元素中
   sceneDiv.value.appendChild(renderer.domElement)
+  // document.getElementById('id')!.appendChild(renderer.domElement)
+
+  //执行渲染操作
   animate()
 })
 </script>
