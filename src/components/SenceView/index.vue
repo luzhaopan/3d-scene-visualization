@@ -8,18 +8,18 @@ import { onMounted, ref } from 'vue'
 // import gsap from 'gsap'
 
 // 导入场景
-import scene from '@/three/scene'
+import scene from '@/base3d/three/scene'
 // 导入相机
-import camera from '@/three/camera'
+import camera from '@/base3d/three/camera'
 // 导入辅助坐标轴
-import axesHelper from '@/three/axesHelper'
+import axesHelper from '@/base3d/three/axesHelper'
 // 导入渲染器
-import renderer from '@/three/renderer'
+import renderer from '@/base3d/three/renderer'
 // 导入每一帧的执行函数
-import animate from '@/three/animate'
+import animate from '@/base3d/three/animate'
 
 // 初始化调整屏幕
-import '@/three/init'
+import '@/base3d/three/init'
 
 // const props = defineProps(['eventList'])
 // 场景元素div
@@ -51,3 +51,4 @@ onMounted(() => {
   top: 0;
 }
 </style>
+@/base3d/three/scene@/base3d/three/camera@/base3d/three/axesHelper@/base3d/three/renderer@/base3d/three/animate@/base3d/three/init
