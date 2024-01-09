@@ -15,6 +15,8 @@ import camera from '@/base3d/three/camera'
 import axesHelper from '@/base3d/three/axesHelper'
 // 导入渲染器
 import renderer from '@/base3d/three/renderer'
+// 导入添加物体函数
+import createMesh from '@/base3d/three/createMesh'
 // 导入每一帧的执行函数
 import animate from '@/base3d/three/animate'
 
@@ -28,6 +30,8 @@ let sceneDiv = ref(null)
 scene.add(camera)
 // 添加辅助坐标轴
 scene.add(axesHelper)
+
+scene.add(createMesh())
 
 onMounted(() => {
   // 渲染器Canvas画布属性.domElement
@@ -51,4 +55,3 @@ onMounted(() => {
   top: 0;
 }
 </style>
-@/base3d/three/scene@/base3d/three/camera@/base3d/three/axesHelper@/base3d/three/renderer@/base3d/three/animate@/base3d/three/init
