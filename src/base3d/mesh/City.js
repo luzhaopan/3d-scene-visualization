@@ -1,7 +1,8 @@
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
-import scene from "../three/scene";
+import scene from "../three/scene.js";
 import MeshLine from "./MeshLine";
+import flyLine from "./flyLine.js";
 
 export default function createCity() {
 	const gltfLoader = new GLTFLoader();
@@ -24,6 +25,9 @@ export default function createCity() {
 		});
 		
 		scene.add(gltf.scene);
+
+		// 添加飞线
+		scene.add(flyLine());
 
 	});
 }
