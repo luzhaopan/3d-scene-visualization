@@ -4,6 +4,7 @@ import scene from "../three/scene.js";
 import MeshLine from "./MeshLine";
 import flyLine from "./flyLine.js";
 import FlyLineShader from "./FlyLineShader";
+import LightRadar from "./LightRadar";
 
 export default function createCity() {
 	const gltfLoader = new GLTFLoader();
@@ -33,6 +34,10 @@ export default function createCity() {
 		// 添加着色器飞线
 		const flyLineShader = new FlyLineShader({ x: 0, z: -10 });
 		scene.add(flyLineShader.mesh);
+
+		// 添加雷达
+		const lightRadar = new LightRadar(5, { x: 5, z: 5 }, 0x0043ff);
+		scene.add(lightRadar.mesh);
 
 	});
 }
