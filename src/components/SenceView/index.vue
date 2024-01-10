@@ -31,7 +31,7 @@ scene.add(camera)
 // 添加辅助坐标轴
 scene.add(axesHelper)
 
-scene.add(createMesh())
+createMesh()
 
 onMounted(() => {
   // 渲染器Canvas画布属性.domElement
