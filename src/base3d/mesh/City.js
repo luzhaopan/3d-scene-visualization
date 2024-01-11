@@ -6,6 +6,7 @@ import flyLine from "./flyLine.js";
 import FlyLineShader from "./FlyLineShader";
 import LightRadar from "./LightRadar";
 import LightWall from "./LightWall";
+import AlarmSprite from "./AlarmSprite";
 
 export default function createCity() {
 	const gltfLoader = new GLTFLoader();
@@ -43,6 +44,13 @@ export default function createCity() {
 		// 添加光墙
 		const lightWall = new LightWall();
 		scene.add(lightWall.mesh);
+
+		// 添加警告标识
+		const alarmSprite = new AlarmSprite("火警");
+		scene.add(alarmSprite.mesh);
+		alarmSprite.onClick(function (e) {
+			console.log("警告", e);
+		});
 
 	});
 }
