@@ -1,6 +1,7 @@
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
 import scene from "../three/scene.js";
+import modifyCityMaterial from "../modify/modifyCityMaterial";
 import MeshLine from "./MeshLine";
 import flyLine from "./flyLine.js";
 import FlyLineShader from "./FlyLineShader";
@@ -17,7 +18,7 @@ export default function createCity() {
 					color: new THREE.Color(0x0c0e33),
 				});
 				item.material = cityMaterial;
-				// modifyCityMaterial(item);
+				modifyCityMaterial(item);
 				if (item.name == "Layerbuildings") {
 					// 给模型添加线框
 					const meshLine = new MeshLine(item.geometry);
