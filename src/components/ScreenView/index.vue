@@ -43,8 +43,8 @@
 </template>
 
 <script setup>
-// import eventHub from '@/utils/eventHub'
 import { ref } from 'vue'
+import emiter from '@/utils/emiter'
 
 const props = defineProps(['dataInfo', 'eventList'])
 
@@ -63,13 +63,13 @@ const imgs = {
 }
 
 const currentActive = ref(null)
-// eventHub.on('spriteClick', (data) => {
-//   currentActive.value = data.i
-// })
+emiter.on('spriteClick', (data) => {
+  currentActive.value = data.i
+})
 
 const toggleEvent = (i) => {
   currentActive.value = i
-  // eventHub.emit('eventToggle', i)
+  emiter.emit('eventToggle', i)
 }
 </script>
 

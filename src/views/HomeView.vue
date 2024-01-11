@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <!-- 场景 -->
-    <SenceView></SenceView>
+    <SenceView :eventList="eventList"></SenceView>
     <!-- 屏幕 -->
     <ScreenView :dataInfo="dataInfo" :eventList="eventList"></ScreenView>
   </div>
@@ -45,9 +45,9 @@ const getEventList = async () => {
 onMounted(async () => {
   changeInfo()
   getEventList()
-  // setInterval(() => {
-  //   changeInfo()
-  //   getEventList()
-  // }, 10000)
+  setInterval(() => {
+    changeInfo()
+    getEventList()
+  }, 10000)
 })
 </script>
