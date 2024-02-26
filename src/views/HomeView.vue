@@ -2,8 +2,6 @@
   <div class="home-container">
     <!-- 场景 -->
     <SenceView :eventList="eventList"></SenceView>
-    <!-- 屏幕 -->
-    <ScreenView :dataInfo="dataInfo" :eventList="eventList"></ScreenView>
   </div>
 </template>
 
@@ -11,7 +9,6 @@
 import { onMounted, reactive, ref } from 'vue'
 import gsap from 'gsap'
 import SenceView from '@/components/SenceView/index.vue'
-import ScreenView from '@/components/ScreenView/index.vue'
 
 import { getInfoApi, getListApi } from '@/api/dashboard'
 
